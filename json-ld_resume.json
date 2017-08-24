@@ -10,19 +10,28 @@
       "@id":"http://schema.org/image",
       "@type":"@id"
     },
+    "label":"http://www.w3.org/2000/01/rdf-schema#label",
     "comment":"http://www.w3.org/2000/01/rdf-schema#comment",
-    "label":"http://www.w3.org/2000/01/rdf-schema#label"
+    "description":"http://schema.org/description",
+    "summary":"http://schema.org/description",
+    "PersonalProfile":"http://xmlns.com/foaf/0.1/PersonalProfileDocument",
+    "startDate":{
+      "@type":"xsd:date"
+    },
+    "endDate":{
+      "@type":"xsd:date"
+    }
   },
-  "@type":"http://xmlns.com/foaf/0.1/PersonalProfileDocument",
-  "@id":"link to you resume goes here",
+  "@type":"PersonalProfile",
+  "@id":"https://personal.website.com/resume.json",
   "comment":"A json-ld resume for Jane Doe",
-  "label":"Resume: Jane Doe",
+  "label":"Resume:Jane Doe:JSON-LD",
   "personal":{
     "name":"Jane Doe",
-    "label":"Programmer",
-    "email":"jane@example.com",
-    "website":"https://personal.website.io",
-    "image":"image url"
+    "profession":"Programmer",
+    "email":"jane.doe@example.com",
+    "website":"https://personal.website.com",
+    "image":"https://personal.website.com/portrait_janedoe.jpg"
   },
   "profiles":{
     "linkedIn":"https://www.linkedin.com/in/janedoe",
@@ -30,27 +39,34 @@
   },
   "work":[
     {
-      "company":"Example Company",
-      "website":"http://examplecompany.com",
+      "company":{
+        "name":"Example Company",
+        "website":"http://examplecompany.com"
+      },
       "position":"Junior Developer",
       "startDate":"2016-01-01",
       "endDate":"2017-01-01",
-      "summary":"A summary of the position"
+      "summary":"A summary of the position",
+      "label":"Jane Doe:Junior Dev:Example Company",
+      "comment":"Jane Doe's job as Junior Developer at Example Company",
     }
   ],
   "education":[
     {
-      "institution":"Foobar University",
+      "institution":{
+        "name":"Foobar University",
+        "website":"http://foobar.edu"
+      },
       "area":"Computer Science",
       "studyType":"Bachelor",
       "startDate":"2013-09-01",
       "endDate":"2016-06-01",
       "courses":[
         "Machine Learning",
-        "Parallel Programming",
         "Graph Theory",
         "Semantic Web",
-        "Linear Algebra"
+        "Linear Algebra",
+        "Advanced Programming"
       ],
       "description":"A description of the degree"
     }
@@ -67,22 +83,32 @@
   ],
   "skills":[
     {
-      "name":".NET Development",
+      "name":"Semantic Web",
       "level":"Expert",
       "keywords":[
-        "C#",
-        ".NET core",
-        "Windows"
+        "OWL",
+        "RDF*",
+        "SPARQL",
+        "Semantic Markup"
       ]
     },
     {
       "name":"Data Science",
-      "level":"Trained",
+      "level":"Advanced",
       "keywords":[
         "Python",
-        "data mining",
-        "big data",
-        "visualization"
+        "Data Mining",
+        "Big Data",
+        "Data Visualization"
+      ]
+    },
+    {
+      "name":".NET Development",
+      "level":"Novice",
+      "keywords":[
+        "C#",
+        ".NET core",
+        "Windows"
       ]
     }
   ]
