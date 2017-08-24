@@ -31,12 +31,19 @@
     "profession":"Programmer",
     "email":"jane.doe@example.com",
     "website":"https://personal.website.com",
-    "image":"https://personal.website.com/portrait_janedoe.jpg"
+    "image":"https://personal.website.com/portrait_janedoe.jpg",
+    "summary":"Personal description/summary"
   },
-  "profiles":{
-    "linkedIn":"https://www.linkedin.com/in/janedoe",
-    "GitHub":"https://github.com/jdoe"
-  },
+    "profiles": [{
+      "network":"GitHub",
+      "username":"jdoe",
+      "url":"https://github.com/jdoe"
+    },
+    {
+      "network":"linkedIn",
+      "username":"Jane Doe",
+      "url":"http://linked.in/janedoe"
+    }],
   "work":[
     {
       "company":{
